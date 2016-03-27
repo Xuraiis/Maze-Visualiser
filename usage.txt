@@ -1,0 +1,18 @@
+
+Arguments:
+
+FLAG VAL-TYPE 	:	VAL BOUNDS	:	DEFAULT VAL	:	DESCRIPTION
+
+-w [int]		:	> 0			:	15			:	Width of the maze, as the number of cells.
+-h [int]		:	> 0			:	15			:	Height of the maze, as the number of cells.
+-s [int]		:	> 0			:	20			:	Size of each cell in pixels, not including walls
+													eg: Window width = (w + 1) * s + 1)
+													eg: Window height = (h + 1) * s + 1)
+-seed [long]	:	any			:	Time, now	:	The initial seed of the RNG for the generator.
+-ms [int]		:	>= 0		:	50			:	The wait time between steps of generating the maze in Milliseconds.
+													This has no effect when the -pregen flag is used.
+													If 0, the rate is limited by the maze to window render speed.
+-pregen			: 	n/a 		:	n/a			:	If used, the maze is completely generated before being displayed.
+-color			:	n/a			:	n/a			:	If each cell of the maze must be rendered based on distance from the start.
+-cgrad [int]	:	> 0			:	5			:	Only has an effect if -color is used. Changes the gradient of the color
+													change based on distance.
